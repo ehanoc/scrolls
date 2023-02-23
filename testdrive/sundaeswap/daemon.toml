@@ -1,0 +1,25 @@
+# TOML for sundaeswap
+
+[source]
+type = "N2N"
+address = "preview-node.world.dev.cardano.org:30002"
+magic = "preview"
+
+[[reducers]]
+type = "UtxoByAddress"
+key_prefix = "sundae.order"
+filter = ["addr_test1wpesulg5dtt5y73r4zzay9qmy3wnlrxdg944xg4rzuvewls7nrsf0"]
+
+[storage]
+type = "Redis"
+connection_params = "redis://redis:6379"
+
+[intersect]
+type = "Point"
+value=[9820109,"dd3fb29ed42ec52079dc8245c527b62522d8c0b4dde156fcf638cc19867b20f1"]
+
+[chain]
+type = "Preview"
+
+[policy]
+missing_data = "Skip"
